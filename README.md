@@ -26,29 +26,33 @@ This tutorial provides a guide on how to deploy on-premises Active Directory wit
    - Set the NIC Private IP address of the DC-1 VM to static.
    - Create a Windows 10 VM named "Client-1" in the same Resource Group and VNet.
 
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/144ab003-2e2f-4fa7-8ebf-9b666b48df62)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/4f386e20-a3f8-4ab5-9f9c-fbd0decbd964)
 
 
 2. **Ensure Connectivity between the Client and Domain Controller**
 
    - Connect to Client-1 using Remote Desktop and ping DC-1's private IP address.
    - If the ping fails, log in to DC-1 and enable ICMPv4 in the local Windows Firewall.
-     ![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/fee0c53a-2509-40fe-a550-e9e269dec8e3)
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/d80f9262-0885-4213-b73e-031e6711dbe6)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/e1036a2f-df66-46aa-9206-afa5f35d5fbb)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/c0b16301-ade9-4e5d-ad1b-05ae2b50c04e)
+
 
    - Verify that the ping from Client-1 to DC-1 succeeds.
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/d809e457-52fb-4f89-8488-5d358cdd7456)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/a8d6156c-7c08-4e5f-83fc-7289c912af25)
+
 
 3. **Install Active Directory**
 
    - Log in to DC-1 and install Active Directory Domain Services.
-   - Promote DC-1 as a domain controller and set up a new forest with a domain name (e.g., mydomain.com).
+   - Promote DC-1 as a domain controller and set up a new forest with a domain name (e.g., dennimun.com).
 
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/2be95767-715b-47f3-940b-06bb6d1f76f4)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/677549a9-0c6d-476f-af0b-11017dfaa533)
 
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/db964fe5-a062-467b-b5fe-e45ba371f2f0)
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/714c58cb-1ab9-461c-b3e4-83b96d35d72b)
 
-![image](https://github.com/JasonDelahoussaye/Configuring_On-premises_Active_Directory_within_Azure_VMs/assets/106440235/1c2424f1-6368-42ae-a6db-de3e15387d8f)
+
+![image](https://github.com/Dennimun/AzureAD-On-Premise-Config/assets/146505956/8d0b05ca-98fb-4b0f-bfcb-62df5a08da52)
+
 
 
 4. **Create an Admin and Normal User Account in AD**
